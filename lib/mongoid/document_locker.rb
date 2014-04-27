@@ -15,6 +15,13 @@ module Mongoid
         update({"$set" => { selected_field => true }})
       true
     end
+
+    def unlock!
+      selected_collection.find(atomic_selector).
+        update({"$set" => { selected_field => false }})
+      true
+    end
+
     def selected_collection
       embedded? ? _root.collection : self.collection
     end

@@ -1,5 +1,6 @@
 class EmbeddedDemo
   include Mongoid::Document
+  include Mongoid::DocumentLocker
 
   field :demo_name
 
