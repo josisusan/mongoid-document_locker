@@ -15,4 +15,12 @@ describe Mongoid::DocumentLocker do
       return_value.should be_true
     end
   end
+
+  context 'For embedded document' do
+    it 'should lock the document after saving' do
+      embedded_demo = demo.create_embed_demo(name: 'EmbeddedDemo')
+      embedded_demo.lock!
+      embedded_demo.reload.lock.should be_true
+    end
+  end
 end
