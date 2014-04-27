@@ -2,6 +2,12 @@ require "mongoid/document_locker/version"
 
 module Mongoid
   module DocumentLocker
-    # Your code goes here...
+    extend ActiveSupport::Concern
+
+    included do
+
+      field :lock, type: Boolean, default: false
+
+    end
   end
 end

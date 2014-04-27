@@ -1,5 +1,6 @@
 class Demo
   include Mongoid::Document
+  include Mongoid::DocumentLocker
 
   field :name
 
