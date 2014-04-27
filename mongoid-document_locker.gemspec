@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Mongoid::DocumentLocker::VERSION
   spec.authors       = ["josisusan"]
   spec.email         = ["josisusan@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Lock the document}
+  spec.description   = %q{Lock the document after it is valid.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
