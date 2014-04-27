@@ -9,5 +9,11 @@ module Mongoid
       field :lock, type: Boolean, default: false
 
     end
+
+    def lock!
+      self.collection.find(atomic_selector).
+          update({"$set" => { "lock" => true }})
+      true
+    end
   end
 end
