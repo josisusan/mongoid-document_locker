@@ -6,8 +6,8 @@ require 'mongoid/document_locker/version'
 Gem::Specification.new do |spec|
   spec.name          = "mongoid-document_locker"
   spec.version       = Mongoid::DocumentLocker::VERSION
-  spec.authors       = ["josisusan"]
-  spec.email         = ["josisusan@gmail.com"]
+  spec.authors       = ["josisusan", "kxhitiz"]
+  spec.email         = ["josisusan@gmail.com", "nirvanagrg@gmail.com"]
   spec.summary       = %q{Lock the document}
   spec.description   = %q{Lock the document after it is valid.}
   spec.homepage      = ""
